@@ -5,4 +5,3 @@ main_delete.py
 .env
 env/
 .gitignore/
-venv/
