@@ -136,7 +136,7 @@ class HBNBCommand(cmd.Cmd):
                         if '.' in value:
                             value = float(value)
                         else:
-                            value = str(value)
+                            value = int(value)
                     except ValueError:
                         pass
             obj_kwargs[key] = value

@@ -2,6 +2,3 @@
 test_params_create
 venv/
 main_delete.py
-.env
-env/
-.gitignore/
