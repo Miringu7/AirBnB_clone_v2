@@ -11,7 +11,7 @@ import models
 class Place(BaseModel, Base):
     """ A place to stay """
     __tablename__ = 'places'
-     _tablename_ = 'amenities'
+    __tablename__ = 'amenities'
 
     city_id = Column(String(60), ForeignKey("cities.id"), nullable=False)
     user_id = Column(String(60), ForeignKey("users.id"), nullable=False)
