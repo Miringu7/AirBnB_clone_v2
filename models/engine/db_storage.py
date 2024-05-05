@@ -43,7 +43,7 @@ class DBStorage:
                 key = "{}.{}".format(type(param).__name__, param.id)
                 dict[key] = param
         else:
-            lists = [State, User, Place, City]
+            lists = [State, User,Review, Amenity, Place, City]
             for c in lists:
                 query = self.__session.query(c)
                 for param in query:
