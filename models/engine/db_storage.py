@@ -43,7 +43,7 @@ class DBStorage:
                 key = "{}.{}".format(type(param).__name__, param.id)
                 dict[key] = param
         else:
-            lists = [State, User,Review, Amenity, Place, City]
+            lists = [State, User, Review, Amenity, Place, City]
             for c in lists:
                 query = self.__session.query(c)
                 for param in query:
@@ -70,3 +70,8 @@ class DBStorage:
         current_ses = sessionmaker(bind=self.__engine, expire_on_commit=False)
         Session = scoped_session(current_ses)
         self.__session = Session()
+
+    def close(self):
+        """ Close the database session """
+        if self.__session:
+            self.__session.close()
